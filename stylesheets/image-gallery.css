@@ -1,0 +1,192 @@
+.container {
+    background:#c0f2e8;
+    margin:20px auto;
+    padding:20px;
+    position:relative;
+    width:700px;
+    z-index: 0;
+
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+
+    box-shadow:1px 1px 5px #111;
+    -moz-box-shadow:1px 1px 5px #111;
+    -webkit-box-shadow:1px 1px 5px #111;
+}
+
+.gallery {
+    width:610px;
+    margin:0 auto;
+}
+
+.gallery a {
+    display:inline-block;
+    height:150px;
+    position:relative;
+    width:200px;
+}
+
+.gallery a img {
+    border:5px solid #fff;
+    cursor:pointer;
+    display:block;
+    height:100%;
+    left:0px;
+    width:400px;
+    position:absolute;
+    top:0px;
+    z-index:1;
+
+    -moz-user-select: none;
+    user-select: none;
+
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -webkit-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -webkit-transition-duration:0.5s;
+    -moz-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -moz-transition-duration:0.5s;
+    -o-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -o-transition-duration:0.5s;
+    transition-property:width, height, top, bottom, left, right, z-index, border;
+    transition-duration:0.5s;
+}
+
+.gallery a:focus img {
+    border:10px solid #fff;
+    cursor:default;
+    height: 462px;
+    z-index:25;
+    width:200px;
+
+    box-shadow:1px 1px 5px #888;
+    -moz-box-shadow:1px 1px 5px #888;
+    -webkit-box-shadow:1px 1px 5px #888;
+    -webkit-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -webkit-transition-duration:0.5s;
+    -moz-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -moz-transition-duration:0.5s;
+    -o-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -o-transition-duration:0.5s;
+    transition-property:width, height, top, bottom, left, right, z-index, border;
+    transition-duration:0.5s;
+}
+
+.close-btn {
+    display:block;
+    cursor:default;
+    z-index: 26;
+    top:4px;
+    left:4px;
+    height:35px;
+    width:35px;
+    position:absolute;
+    opacity: .5;
+    -webkit-transition-property:opacity;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-duration:0.5s;
+}
+
+.slider-bg {
+    display:none;
+    z-index:25;
+    background:#000;
+    top:360px;
+    height:102px;
+    width:600px;
+    left:0;
+    position:absolute;
+    opacity:.5;
+}
+
+.slider-info {
+    display:none;
+    z-index:25;
+    top:360px;
+    height:75px;
+    width:600px;
+    left:0;
+    position:absolute;
+}
+
+.gallery a:focus .slider-bg {
+    display:block;
+}
+
+.gallery a:focus .slider-info {
+    display:block;
+}
+
+.close-btn:hover {
+    cursor:pointer;
+    opacity: 1;
+}
+
+a:active .close-btn {
+    background: #000;
+}
+
+/* top left; middle left; bottom left*/
+    .gallery a:focus:nth-child(3n+1) img {
+        left:0px;
+        width:200px;
+    }
+
+/* top middle; middle middle; bottom middle*/
+    .gallery a:focus:nth-child(3n+2) img {
+        left:-205px;
+        width:200px;
+    }
+
+    .gallery a:focus:nth-child(3n+2) .slider-bg {
+        left:-205px;
+    }
+
+    .gallery a:focus:nth-child(3n+2) .slider-info {
+        left:-205px;
+    }
+
+/* top right; middle right; bottom right*/
+    .gallery a:focus:nth-child(3n+3) img {
+        left:-410px;
+        width:200px;
+    }
+
+    .gallery a:focus:nth-child(3n+3) .slider-bg {
+        left:-410px;
+    }
+
+    .gallery a:focus:nth-child(3n+3) .slider-info {
+        left:-410px;
+    }
+
+/* middle left; middle middle; middle right*/
+    .gallery a:focus:nth-child(1n+4) img {
+        top:-156px;
+        width:200px;
+    }
+
+    .gallery a:focus:nth-child(1n+4) .slider-bg {
+        top:+204px;
+    }
+
+    .gallery a:focus:nth-child(1n+4) .slider-info {
+        top:+204px;
+    }
+
+/* bottom left; bottom middle; bottom right*/
+    .gallery a:focus:nth-child(1n+7) img {
+        top:-312px;
+        width:200px;
+    }
+
+    .gallery a:focus:nth-child(1n+7) .slider-bg {
+        top:+48px;
+    }
+
+    .gallery a:focus:nth-child(1n+7) .slider-info {
+        top:+48px;
+    }
