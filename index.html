@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Mift Home Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -14,6 +13,12 @@
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="scripts/script.js"></script>
         <script src="scripts/jquery.js"></script>
+        <!--  Website Meta Data  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="application-name" content="Mift">
+        <meta name="description" content="Mift (Myo and Oculus Rift) official website and download">
+        <meta name="author" content="Bryce Hahn">
 
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,7 +43,7 @@
             <h1>
                 <a id="about-mift" class="anchor" href="#about-mift"></a>About Mift
             </h1>
-            <blockquote>Nearing the end of my Junior year, I came up with the idea to develop a 3D game that implements the <a href="https://www.oculus.com/">Oculus Rift</a> and <a href="https://www.myo.com/">MYO Armband</a>. I threw a concept idea to <a href="aboutTheTeam.html#about-jason-galbraith">our teacher</a>, explaining how I would build a 3D engine and develop the game from the ground up then implement these features. The idea intrigued Mr. Galbraith, leading to the purchase of the Oculus Rift DK2. I worked on Mift all throughout the summer, pushing through the bulk of the 3D engine, creating a playable(ish) game to preview at the beginning of my senior year. Nearing the end of the year, many large features have been implemented, too many to list <a href="https://www.github.com/hahn2014/mift/commits/master">(I recommend checking out the Mift Repository)</a>. Although the Oculus Rift has not yet been implemented into the game, it is a feature the Mift team definitely plans to add later on down the road. Our goal is to successfully have implemented at least the Myo Armband into the game prior to OGPC 2016 (currently under implementation stages). Mift is a simple 3D game project which is not to be taken seriously as for it is still in pre-alpha stage. Post high school development plans are still unknown as a team, but I plan to continue working on Mift until release!<h2>-Bryce Hahn</h2></blockquote>
+            <blockquote>Mift is a word <a href="aboutTheTeam.html#about-mason-cluff">Mason Cluff</a> and I invented while coming up with a name for the game. It is a mix of the Myo and the Oculus Rift. Nearing the end of my Junior year, I came up with the idea to develop a 3D game that implements the <a href="https://www.oculus.com/">Oculus Rift</a> and <a href="https://www.myo.com/">MYO Armband</a>. I threw a concept idea to <a href="aboutTheTeam.html#about-jason-galbraith">our teacher</a>, explaining how I would build a 3D engine and develop the game from the ground up then implement these features. The idea intrigued Mr. Galbraith, leading to the purchase of the Oculus Rift DK2. I worked on Mift all throughout the summer, pushing through the bulk of the 3D engine, creating a playable(ish) game to preview at the beginning of my senior year. Nearing the end of the year, many large features have been implemented, too many to list <a href="https://www.github.com/hahn2014/mift/commits/master">(I recommend checking out the Mift Repository)</a>. Although the Oculus Rift has not yet been implemented into the game, it is a feature the Mift team definitely plans to add later on down the road. Our goal is to successfully have implemented at least the Myo Armband into the game prior to OGPC 2016 (currently under implementation stages). Mift is a simple 3D game project which is not to be taken seriously as for it is still in pre-alpha stage. Post high school development plans are still unknown as a team, but I plan to continue working on Mift until release!<h2>-Bryce Hahn</h2></blockquote>
             <br>
             <h1>
                 <a id="image-galary" class="anchor" href="#image-galary"></a>Pre-Alpha Screenshots
@@ -47,85 +52,154 @@
             <div class="container" id="container">
                 <div class="gallery">
                     <a tabindex="1">
-                        <img src="images/screenshot1.png">
+                        <img class="gallery-image" src="images/screenshot1_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 1</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Full Scene Landscape View</strong>
+                            <p class="slider-text">View the randomly generated landscapes of Mift from a 3rd person POV while you run around the terrain</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(1)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot2.png">
+                        <img class="gallery-image" src="images/screenshot2_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 2</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Real Time Shadows</strong>
+                            <p class="slider-text">Watch your shadow cast across the land as the in game time flies by. Shadow Softening allows for smoother edges.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(2)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot3.png">
+                        <img class="gallery-image" src="images/screenshot3_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 3</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Water Reflections, Animations and Refractions</strong>
+                            <p class="slider-text">Watch the waves as the water bodies animate real time reflections and sun refractions.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(3)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot4.png">
+                        <img class="gallery-image" src="images/screenshot4_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 4</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Object Placing / Spawning (Temporary Feature)</strong>
+                            <p class="slider-text">When in full Overhead POV, place enemies, players, ect.. as to fill the world with life</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(4)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot5.png">
+                        <img class="gallery-image" src="images/screenshot5_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 5</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Anti-Aliasing and Ani-Sotropic Filtering</strong>
+                            <p class="slider-text">Up the graphics and increase the level of detail by reducing jagged edjes with AA and AF!</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(5)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot6.png">
+                        <img class="gallery-image" src="images/screenshot6_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 6</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Into The Woods</strong>
+                            <p class="slider-text">Explore the auto-generated forests of the land! View beautiful and not so beautiful trees.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(6)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot7.png">
+                        <img class="gallery-image" src="images/screenshot7_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 7</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Entity Shadows</strong>
+                            <p class="slider-text">Real time dynamic entity shadows will be cast apon other entities and the terrain.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(7)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot8.png">
+                        <img class="gallery-image" src="images/screenshot8_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 8</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Transparent Shadows</strong>
+                            <p class="slider-text">Objects with transparent features, such as the fern leaf will produce accurate shadows through the transperancy.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(8)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
                     <a tabindex="1">
-                        <img src="images/screenshot9.png">
+                        <img class="gallery-image" src="images/screenshot9_lowres.png">
                         <div class="slider-bg"></div>
                         <div class="slider-info">
-                            <strong>Image 9</strong>
-                            <p class="slider-text">this is an image description</p>
+                            <strong>Not So Special Menu</strong>
+                            <p class="slider-text">Our extremly experimental menu allows for mid-game breaks and the changing of settings at any time.</p>
+                            <div class="goto-btn">
+                                <img clss="button" title="View Full Resolution Image" onclick="openHighRes(9)" src="images/goto.png">
+                            </div>
+                            <div class="close-btn">
+                                <img clss="button" title="Close Image Magnification" src="images/close.png">
+                            </div>
                         </div>
                     </a>
-                    <div class="close-btn">
-                        <img src="images/close.png">
-                    </div>
                 </div>
             </div>
-            <br><br><br>
+            <br>
+            <h1>
+                How To Play
+            </h1>
+            <ul>
+                <li type="1">Download Desired Executable ZIP from <a href="download.html">downloads page</a></li>
+                <li type="1">Unzip <b>ALL</b> files and folders from zip to desired directory.</li>
+                <li type="1">Change settings from Mift.set file as you please</li>
+                <li type="1">Run downloaded Mift file:</li>
+                    <ul>
+                        <li type="i"><u>Mift-windowsX64X32.exe</u> for Windows 7 and above</li>
+                        <li type="i"><u>Mift-macosxX64X32.app</u> for Mac OS X Snow Leapord and above</li>
+                        <li type="i"><u>Mift-crossplatX64X32.jar</u> for any platform with <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html">Java Runtime Environment 1.8 or above</a></li>
+                    </ul>
+                <li type="1">Do not delete or move any folders and subfiles! The game requires them to run and will no longer run.</li>
+            </ul>
+            <br>
           <footer class="site-footer">
             <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
+            <br>
+            <a style="display:none" href="google9cdc732d83a9930a.html">Google Verification Link</a>
           </footer>
         </section>
     </body>
