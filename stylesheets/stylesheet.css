@@ -150,10 +150,6 @@ a:hover {
   margin-top: 200; 
 }
 
-.main-content img {
-  max-width: 100%;
-}
-
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -297,7 +293,7 @@ a:hover {
     margin: 0 auto;
     margin-top: 200px;
     font-size: 1.1rem;
-    background-color: #e6fff9;
+    background-color: #d9fff7;
   }
 }
 
@@ -365,7 +361,7 @@ a:hover {
   z-index: -1;
   height: 250px;
   border: 10px solid #fff;
-  border-bottom: 45px solid #fff;
+  border-bottom: 55px solid #fff;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
@@ -397,7 +393,7 @@ a:hover {
   height: 320px;
   float: right;
   border: 10px solid #fff;
-  border-bottom: 45px solid #fff;
+  border-bottom: 55px solid #fff;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
