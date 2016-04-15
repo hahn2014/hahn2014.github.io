@@ -3,7 +3,11 @@
 }
 
 .container {
-    background:#c0f2e8;
+    background: #affdef; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #affdef 0%, #05edc3 34%, #00d6af 51%, #05edc3 73%, #05edc3 73%, #52f6d8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #affdef 0%,#05edc3 34%,#00d6af 51%,#05edc3 73%,#05edc3 73%,#52f6d8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #affdef 0%,#05edc3 34%,#00d6af 51%,#05edc3 73%,#05edc3 73%,#52f6d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#affdef', endColorstr='#52f6d8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     margin:20px auto;
     padding:20px;
     position:relative;

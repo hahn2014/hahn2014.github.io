@@ -360,8 +360,8 @@ a:hover {
 .bryce-hahn-imagebed img {
   z-index: -1;
   height: 250px;
-  border: 10px solid #fff;
-  border-bottom: 55px solid #fff;
+  border: 10px solid #affdef;
+  border-bottom: 55px solid #affdef;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
@@ -392,8 +392,8 @@ a:hover {
 .mason-cluff-imagebed img {
   height: 320px;
   float: right;
-  border: 10px solid #fff;
-  border-bottom: 55px solid #fff;
+  border: 10px solid #affdef;
+  border-bottom: 55px solid #affdef;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
@@ -424,8 +424,8 @@ a:hover {
 .jason-galbraith-imagebed img {
   height: 350px;
   width: 310px;
-  border: 10px solid #fff;
-  border-bottom: 65px solid #fff;
+  border: 10px solid #affdef;
+  border-bottom: 65px solid #affdef;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
@@ -442,7 +442,12 @@ a:hover {
 }
 
 .about-a-developer {
-    background:#c0f2e8;
+background: #affdef; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #affdef 0%, #05edc3 34%, #00d6af 51%, #05edc3 73%, #05edc3 73%, #52f6d8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #affdef 0%,#05edc3 34%,#00d6af 51%,#05edc3 73%,#05edc3 73%,#52f6d8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #affdef 0%,#05edc3 34%,#00d6af 51%,#05edc3 73%,#05edc3 73%,#52f6d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#affdef', endColorstr='#52f6d8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     margin:20px auto;
     padding:20px;
     position:relative;
@@ -520,7 +525,7 @@ a:hover {
   position: relative;
   width: 320px;
   height:200px;
-  background:#c0f2e8;
+  background:#affdef;
   margin:20px auto;
   padding:20px;
   z-index: 0;
@@ -539,9 +544,9 @@ a:hover {
   position:absolute;
   height: 140px;
   width:280px;
-  background-color: #95ead9;
-  border-top: 50px solid #95ead9;
-  border-left: 40px solid#95ead9;
+  background-color: #00d6af;
+  border-top: 50px solid #00d6af;
+  border-left: 40px solid#00d6af;
   box-shadow: 10px 10px 6px #aaa;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;

@@ -1,10 +1,12 @@
-( function( $ ) {
-$( document ).ready(function() {
-$('#cssmenu').prepend('<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>');
-});
-} )( jQuery );
-
-
+(
+	function($) {
+		$(document).ready(
+			function() {
+				$('#cssmenu').prepend('<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>');
+			}
+		);
+	}
+)(jQuery);
 
 function openHighRes(image) {
 	if (image == 1) {
@@ -28,3 +30,9 @@ function openHighRes(image) {
 	}
 	window.location.href = src;
 }
+
+function addScrollMargin() {
+    window.scrollTo(0, window.pageYOffset - 400);
+}
+
+window.addEventListener('hashchange', addScrollMargin);
