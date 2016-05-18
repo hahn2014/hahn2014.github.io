@@ -1,0 +1,273 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	color: #fff;
+	background: #2f3238;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+	color: #B24E51;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #afb3b8;
+	outline: none;
+}
+.content {
+	min-height: 250px;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+.content--tiny {
+	max-width: 800px;
+}
+
+.container {
+	text-align: center;
+	padding: 5.25em 0.5em 0;
+}
+
+/* Header */
+.header {
+	padding: 0;
+	letter-spacing: -1px;
+}
+
+.header h1 {
+	font-weight: 800;
+	font-size: 3.5em;
+	line-height: 1;
+	margin: 0;
+	color: #9fa4ad;
+}
+
+.header h1 span {
+	display: block;
+	font-size: 35%;
+	letter-spacing: 1px;
+	padding-top: 0.75em;
+	color: #B24E51;
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #a04649;
+  text-align: left;
+}
+
+.main-content p {
+  margin-bottom: 1em;
+  text-align:justify;
+}
+
+.main-content {
+    max-width: 80%;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.main-content code {
+  padding: 2px 4px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  color: #383e41;
+   background-color: #b3ffed;
+  border-radius: 0.3rem;
+}
+
+.main-content blockquote {
+  padding: 0 1rem;
+  margin-left: 0;
+  color: #819198;
+  border-left: 0.3rem solid #dce6f0;
+}
+
+.main-content blockquote > :first-child {
+  margin-top: 0;
+}
+
+.main-content blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.main-content ul, .main-content ol {
+  margin-top: 0;
+}
+
+.main-content li {
+	text-align: left;
+	color: #9fa4ad;
+}
+
+.main-content table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.main-content table th {
+  font-weight: bold;
+}
+
+.main-content table th, .main-content table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e9ebec;
+}
+
+@media screen and (max-width: 30em) {
+	.header h1 {
+		font-size: 3em;
+	}
+}
+
+.site-footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px #e4e6e7;
+  text-align:center;
+}
+
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+
+.site-footer-credits {
+  color: #819198;
+}
+
+
+
+
+/* about page*/
+.bryce-hahn-imagebed {
+  position: relative;
+  float: left;
+  width: 320px;
+}
+
+.bryce-hahn-about-text {
+  position: relative;
+  float: right;
+  width: 200px;
+}
+
+.bryce-hahn-imagebed img {
+  z-index: -1;
+  height: 250px;
+  border: 10px solid #393946;
+  border-bottom: 55px solid #393946;
+  box-shadow: 10px 10px 6px #aaa;
+  -webkit-box-shadow: 3px 3px 3px #22222a;
+     -moz-box-shadow: 3px 3px 3px #22222a;
+          box-shadow: 3px 3px 3px #22222a;
+}
+
+.bryce-hahn-imagebed p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.mason-cluff-imagebed {
+  position: relative;
+  float: right;
+  width: 300px;
+}
+
+.mason-cluff-about-text {
+  position: relative;
+  float: left;
+  width: 200px;
+}
+
+.mason-cluff-imagebed img {
+  height: 320px;
+  float: right;
+  border: 10px solid #393946;
+  border-bottom: 55px solid #393946;
+  box-shadow: 10px 10px 6px #aaa;
+  -webkit-box-shadow: 3px 3px 3px #22222a;
+     -moz-box-shadow: 3px 3px 3px #22222a;
+          box-shadow: 3px 3px 3px #22222a;
+}
+
+.mason-cluff-imagebed p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.jason-galbraith-imagebed {
+  position: relative;
+  float: left;
+  width: 320px;
+}
+
+.jason-galbraith-about-text {
+  position: relative;
+  float: right;
+  width: 200px;
+}
+
+.jason-galbraith-imagebed img {
+  height: 350px;
+  width: 310px;
+  border: 10px solid #393946;
+  border-bottom: 65px solid #393946;
+  box-shadow: 10px 10px 6px #aaa;
+  -webkit-box-shadow: 3px 3px 3px #22222a;
+     -moz-box-shadow: 3px 3px 3px #22222a;
+          box-shadow: 3px 3px 3px #22222a;
+}
+
+.jason-galbraith-imagebed p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.about-a-developer {
+  background: #17171c; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #17171c 0%, #464a53 34%, #5e636e 51%, #464a53 73%, #464a53 73%, #17171c 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #17171c 0%,#464a53 34%,#5e636e 51%,#464a53 73%,#464a53 73%,#17171c 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #17171c 0%,#464a53 34%,#5e636e 51%,#464a53 73%,#464a53 73%,#17171c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17171c', endColorstr='#17171c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    margin:20px auto;
+    padding:20px;
+    position:relative;
+    z-index: 0;
+
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+
+    box-shadow:1px 1px 5px #111;
+    -moz-box-shadow:1px 1px 5px #111;
+    -webkit-box-shadow:1px 1px 5px #111;
+}

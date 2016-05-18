@@ -1,194 +1,265 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mift Updates and News</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="icon" type="image/ico" href="images/favicon.ico">
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/script.js"></script>
-    </head>
-    <body>
-        <section class="page-header">
-            <h1 class="project-name">Mift</h1>
-            <h2 class="project-tagline">A 3D LWJGL game.</h2>
-            <div id='cssmenu'>
-                <ul>
-                   <li><a href='index.html'><span>Home</span></a></li>
-                   <li><a href='aboutTheTeam.html'><span>About The Team</span></a></li>
-                   <li><a href='download.html'><span>Download</span></a></li>
-                   <li class='active'><a href='updates.html'><span>Updates</span></a></li>
-                   <li class='last'><a href='contactUs.html'><span>Contact Us</span></a></li>
-                </ul>
-            </div>
-        </section>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mift Updates And News</title>
+		<meta name="description" content="Mift (Myo and Oculus Rift) official website"/>
+		<meta name="author" content="Bryce Hahn"/>
+		<link rel="shortcut icon" href="img/favicon.ico">
 
-        <section class="main-content">
-            <div id="patches" id="patches">
-                <h1>
-                    <a id="view-updates" class="anchor" href="#patches">Mift Patch Notes</a> /
-                    <a id="view-news" class="anchor" href="#news">Mift Upcoming Features</a>
-                </h1>
-                <p id="github-updates-p">\\temporary information prior to the pull from github//</p>
-            </div>
-            <br><br>
-            <div id="news">
-                <h2>
-                    <a class="anchor"></a>Mift News / Coming Features
-                </h2>
-                <table style="width:100%">
-                    <colgroup>
-                        <col span="1" style="background-color: #b3ffee">
-                        <col span="1" style="background-color: #ccfff3">
-                        <col span="1" style="background-color: #b3ffee">
-                        <col span="1" style="background-color: #ccfff3">
-                    </colgroup>
-                    <tr>
-                        <th style="width:5%">Update</th>
-                        <th style="width:60%">Description</th>
-                        <th style="width:10%">Estimated Release Build</th>
-                        <th style="width:20%">Developer</th>
-                        <th style="width:5%">Under Development</th>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            Depth of Field Effect
-                        </td>
-                        <td style="text-align: center">
-                            Objects and terrain at a distance in the background will be blured to optimize the game
-                        </td>
-                        <td style="text-align: center">
-                            Pre-Alpha 1.70
-                        </td>
-                        <td style="text-align: center">
-                            Bryce Hahn
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            Proper Collision Detection
-                        </td>
-                        <td style="text-align: center">
-                            Player will properly calculate collisions and will not get stuck on collision
-                        </td>
-                        <td style="text-align: center">
-                            Pre-Alpha 1.75
-                        </td>
-                        <td style="text-align: center">
-                            Bryce Hahn
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            World Edge Fog
-                        </td>
-                        <td style="text-align: center">
-                            The world is not infinite, therefor there will be a world border with heavy fog
-                        </td>
-                        <td style="text-align: center">
-                            Pre-Alpha 1.90
-                        </td>
-                        <td style="text-align: center">
-                            Bryce Hahn
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            World Saving and Loading
-                        </td>
-                        <td style="text-align: center">
-                            Save your world and come back to it later through the load world menu.
-                        </td>
-                        <td style="text-align: center">
-                            Pre-Alpha 1.90
-                        </td>
-                        <td style="text-align: center">
-                            Bryce Hahn
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            Custom Myo Spell Controlls
-                        </td>
-                        <td style="text-align: center">
-                            When connected, the Myo Armband will allow spells to be fired through special arm movements and sequences
-                        </td>
-                        <td style="text-align: center">
-                            Pre-Alpha 1.98
-                        </td>
-                        <td style="text-align: center">
-                            Mason Cluff
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled unchecked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">
-                            Oculus Rift Implementation
-                        </td>
-                        <td style="text-align: center">
-                            Experience the world of Mift like never before through virtual reality heasets
-                        </td>
-                        <td style="text-align: center">
-                            Alpha 1.00
-                        </td>
-                        <td style="text-align: center">
-                            Bryce Hahn
-                        </td>
-                        <td style="text-align: center">
-                            <input type="checkbox" name="underdev" value="Under Development" disabled unchecked>
-                        </td>
-                    </tr>
-                </table>
-                <!--Table Template
-                    <tr>
-                        <td style="text-align: center">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/fa/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css"/>
+        <link rel="stylesheet" type="text/css" href="css/image-gallery.css">
 
-                        </td>
-                        <td style="text-align: justify">
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/update.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="theme-1">
+		<div class="container">
+			<nav id="menu" class="menu">
+				<button class="menu__handle"><span>Menu</span></button>
+				<div class="menu__inner">
+					<ul>
+						<li><a href="index.html"><i class="fa fa-fw fa-home"></i><span>Home<span></a></li>
+						<li><a href="aboutTheTeam.html"><i class="fa fa-child"></i><span>About Us<span></a></li>
+						<li><a href="download.html"><i class="fa fa-arrow-circle-o-down"></i><span>Download<span></a></li>
+						<li><a href="updates.html"><i class="fa fa-refresh"></i><span>Updates<span></a></li>
+						<li><a href="contactUs.html"><i class="fa fa-paper-plane-o"></i><span>Contact Us<span></a></li>
+					</ul>
+				</div>
+				<div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+					<svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+						<path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/>
+					</svg>
+				</div>
+			</nav>
+			<div class="main">
+				<header class="header">
+					<h1>Mift<span>A Light Weight Java Gaming Library Game</span></h1>
+				</header>
 
-                        </td>
-                        <td style="text-align: center">
 
-                        </td>
-                        <td style="text-align: center">
+				<section class="main-content">
+		            
+					<div id="patches" id="patches">
+		                <h1>
+		                    <a id="view-updates" class="anchor" href="#patches">Mift Patch Notes</a> /
+		                    <a id="view-news" class="anchor" href="#news">Mift Upcoming Features</a>
+		                </h1>
+		                <p id="github-updates-p">\\temporary information prior to the pull from github//</p>
+		            </div>
+		            <br><br>
+		            <div class="about-a-developer">
+			            <div id="news">
+			                <h2>
+			                    <a class="anchor"></a>Mift News / Coming Features
+			                </h2>
+			                <table style="width:100%">
+			                   
+			                    <tr>
+			                        <th style="width:5%">Update</th>
+			                        <th style="width:60%">Description</th>
+			                        <th style="width:10%">Estimated Release Build</th>
+			                        <th style="width:20%">Developer</th>
+			                        <th style="width:5%">Under Development</th>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            Depth of Field Effect
+			                        </td>
+			                        <td style="text-align: center">
+			                            Objects and terrain at a distance in the background will be blured to optimize the game
+			                        </td>
+			                        <td style="text-align: center">
+			                            Pre-Alpha 1.70
+			                        </td>
+			                        <td style="text-align: center">
+			                            Bryce Hahn
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            Proper Collision Detection
+			                        </td>
+			                        <td style="text-align: center">
+			                            Player will properly calculate collisions and will not get stuck on collision
+			                        </td>
+			                        <td style="text-align: center">
+			                            Pre-Alpha 1.75
+			                        </td>
+			                        <td style="text-align: center">
+			                            Bryce Hahn
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            World Edge Fog
+			                        </td>
+			                        <td style="text-align: center">
+			                            The world is not infinite, therefor there will be a world border with heavy fog
+			                        </td>
+			                        <td style="text-align: center">
+			                            Pre-Alpha 1.90
+			                        </td>
+			                        <td style="text-align: center">
+			                            Bryce Hahn
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            World Saving and Loading
+			                        </td>
+			                        <td style="text-align: center">
+			                            Save your world and come back to it later through the load world menu.
+			                        </td>
+			                        <td style="text-align: center">
+			                            Pre-Alpha 1.90
+			                        </td>
+			                        <td style="text-align: center">
+			                            Bryce Hahn
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled checked>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            Custom Myo Spell Controlls
+			                        </td>
+			                        <td style="text-align: center">
+			                            When connected, the Myo Armband will allow spells to be fired through special arm movements and sequences
+			                        </td>
+			                        <td style="text-align: center">
+			                            Pre-Alpha 1.98
+			                        </td>
+			                        <td style="text-align: center">
+			                            Mason Cluff
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled unchecked>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td style="text-align: center">
+			                            Oculus Rift Implementation
+			                        </td>
+			                        <td style="text-align: center">
+			                            Experience the world of Mift like never before through virtual reality heasets
+			                        </td>
+			                        <td style="text-align: center">
+			                            Alpha 1.00
+			                        </td>
+			                        <td style="text-align: center">
+			                            Bryce Hahn
+			                        </td>
+			                        <td style="text-align: center">
+			                            <input type="checkbox" name="underdev" value="Under Development" disabled unchecked>
+			                        </td>
+			                    </tr>
+			                </table>
+			                <!--Table Template
+			                    <tr>
+			                        <td style="text-align: center">
 
-                        </td>
-                        <td style="text-align: center">
+			                        </td>
+			                        <td style="text-align: justify">
 
-                        </td>
-                    </tr>
+			                        </td>
+			                        <td style="text-align: center">
 
-                -->
-            </div>
+			                        </td>
+			                        <td style="text-align: center">
 
-            <br>
-            <br>
-            <br>
-            <p style="text-align: center">Back to <a href="#patches">Updates</a></p>
-          <footer class="site-footer">
-            <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
-            <br>
-            <span id="page-views" class="site-footer-credits">site views</span>
-          </footer>
-        </section>
-    </body>
+			                        </td>
+			                        <td style="text-align: center">
+
+			                        </td>
+			                    </tr>
+
+			                -->
+			            </div>
+		            </div>
+
+		            <br>
+		            <br>
+		            <br>
+		            <p style="text-align: center"><a href="#patches">Back to top</a></p>
+
+		            <footer class="site-footer">
+			            <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
+			            <br>
+			            <a style="display:none" href="google9cdc732d83a9930a.html">Google Verification Link</a>
+		          	</footer>
+		        </section>
+			</div><!-- /main -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script>
+			(function() {
+
+				function SVGMenu( el, options ) {
+					this.el = el;
+					this.init();
+				}
+
+				SVGMenu.prototype.init = function() {
+					this.trigger = this.el.querySelector( 'button.menu__handle' );
+					this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+
+					var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+					this.pathEl = s.select( 'path' );
+					this.paths = {
+						reset : this.pathEl.attr( 'd' ),
+						open : this.shapeEl.getAttribute( 'data-morph-open' ),
+						close : this.shapeEl.getAttribute( 'data-morph-close' )
+					};
+
+					this.isOpen = false;
+
+					this.initEvents();
+				};
+
+				SVGMenu.prototype.initEvents = function() {
+					this.trigger.addEventListener( 'click', this.toggle.bind(this) );
+				};
+
+				SVGMenu.prototype.toggle = function() {
+					var self = this;
+
+					if( this.isOpen ) {
+						classie.remove( self.el, 'menu--anim' );
+						setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
+					}
+					else {
+						classie.add( self.el, 'menu--anim' );
+						setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
+					}
+					this.pathEl.stop().animate( { 'path' : this.isOpen ? this.paths.close : this.paths.open }, 350, mina.easeout, function() {
+						self.pathEl.stop().animate( { 'path' : self.paths.reset }, 800, mina.elastic );
+					} );
+					
+					this.isOpen = !this.isOpen;
+				};
+
+				new SVGMenu( document.getElementById( 'menu' ) );
+
+			})();
+		</script>
+	</body>
 </html>

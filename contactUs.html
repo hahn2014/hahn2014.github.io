@@ -1,221 +1,115 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contact Us</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="icon" type="image/ico" href="images/favicon.ico">
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/script.js"></script>
-    </head>
-    <body>
-        <section class="page-header">
-            <h1 class="project-name">Mift</h1>
-            <h2 class="project-tagline">A 3D LWJGL game.</h2>
-            <div id='cssmenu'>
-                <ul>
-                   <li><a href='index.html'><span>Home</span></a></li>
-                   <li><a href='aboutTheTeam.html'><span>About The Team</span></a></li>
-                   <li><a href='download.html'><span>Download</span></a></li>
-                   <li><a href='updates.html'><span>Updates</span></a></li>
-                   <li class='active'class='last'><a href='contactUs.html'><span>Contact Us</span></a></li>
-                </ul>
-            </div>
-        </section>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contact Us</title>
+		<meta name="description" content="Contact Mift Team"/>
+		<meta name="author" content="Bryce Hahn"/>
+		<link rel="shortcut icon" href="img/favicon.ico">
 
-        <section class="main-content">
-            <h3>
-                <a id="contact-us" class="anchor"></a>Contact Us About Glitches, Bugs, Exploits, ETC...
-            </h3>
-            
-            <header>
-                <script>
-                    function checkEmpty(obj, val) {
-                        if (obj == 0) {
-                            //check name
-                            if (val.value == '') {
-                                //name is empty
-                                document.getElementById("DaName").style.color = "red";
-                                document.getElementById("nameCheck").src = "https://online.pcc.edu/d2l/img/0/Shared.Main.infIncorrect.gif?v=9.4.1000.80-5";
-                            } else {
-                                //name is not empty
-                                document.getElementById("DaName").style.color = "black";
-                                document.getElementById("nameCheck").src = "https://gfcmsu.desire2learn.com/shared/documentation/10/Student/graphics/icons/checkmark_green.gif?_&d2lSessionVal=";
-                            }
-                        } else if (obj == 1) {
-                            //check email
-                            if (val.value == '') {
-                                //email is empty
-                                document.getElementById("Email").style.color = "red";
-                                document.getElementById("Email").innerHTML = "Email Address *";
-                                document.getElementById("emailCheck").src = "https://online.pcc.edu/d2l/img/0/Shared.Main.infIncorrect.gif?v=9.4.1000.80-5";
-                            } else {
-                                //email isn't empty
-                                if (validateEmail(email) == true) {
-                                    document.getElementById("Email").style.color = "black";
-                                    document.getElementById("Email").innerHTML = "Email Address *";
-                                    document.getElementById("emailCheck").src = "https://gfcmsu.desire2learn.com/shared/documentation/10/Student/graphics/icons/checkmark_green.gif?_&d2lSessionVal=";
-                                } else {
-                                    document.getElementById("Email").style.color = "red";
-                                    document.getElementById("Email").innerHTML = "Please enter a valid email";
-                                    document.getElementById("emailCheck").src = "https://online.pcc.edu/d2l/img/0/Shared.Main.infIncorrect.gif?v=9.4.1000.80-5";
-                                }
-                            }
-                        } else if (obj == 2) {
-                            //check comments
-                            if (val.value == '') {
-                                //suggestion is empty
-                                document.getElementById("Comments").style.color = "red";
-                                document.getElementById("commentsCheck").src = "https://online.pcc.edu/d2l/img/0/Shared.Main.infIncorrect.gif?v=9.4.1000.80-5";
-                            } else {
-                                //suggestion is not empty
-                                document.getElementById("Comments").style.color = "black";
-                                document.getElementById("commentsCheck").src = "https://gfcmsu.desire2learn.com/shared/documentation/10/Student/graphics/icons/checkmark_green.gif?_&d2lSessionVal=";
-                            }
-                        }
-                    }
-                    function checkForm(name, email, comments) {
-                        alert("sorry but this is not an active feature yet! :/");
-                        if (name.value != '' && validateName(name) == true && email.value != '' && validateEmail(email) == true && comments.value != '') {
-                            sendForm();
-                            document.getElementById('Email').innerHTML = 'Email Address *';
-                        }
-                    }
-                    function validateEmail(email) { //check if the email is a real email
-                        document.getElementById('Email').innerHTML = 'Email Address *';
-                        filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                        if (email.value != '') {
-                            if (filter.test(email.value)) {//valid email
-                                document.getElementById("Email").style.color = "black";
-                                return true;
-                            } else {
-                                //invalid email
-                                document.getElementById("Email").style.color = "red";
-                                document.getElementById('Email').innerHTML = 'Please enter a valid email';
-                                document.getElementById("emailCheck").src = "https://online.pcc.edu/d2l/img/0/Shared.Main.infIncorrect.gif?v=9.4.1000.80-5";
-                                return false;
-                            }
-                        } else {
-                            document.getElementById("Email").style.color = "red";
-                        }
-                    }
-                    function validateName(name) {    
-                        re = /^[A-Za-z]+$/;
-                        if (re.test(name.value)) {
-                           //valid name
-                           return true;
-                        } else {
-                            //invalid name
-                            document.getElementById("DaName").style.color = "red";
-                            document.getElementById("nameCheck").src = "http://upload.wikimedia.org/wikipedia/commons/8/8c/Transparent.png";
-                           return false;
-                        }
-                    }
-                    function sendForm() {
-                        alert("sorry but this is not an active feature yet! :/");
-                    }
-                    function resetForm() {
-                        document.getElementById('Name').value = "";
-                        document.getElementById('email').value = "";
-                        document.getElementById('comments').value = "";
-                        document.getElementById("note").style.display = 'none';
-                    }
-                    function wantCheck(obj, ans) {
-                        if (ans == true) {
-                            //update
-                            update(obj);
-                        } else {
-                            //nothing changed yet, do nothing.
-                            return;
-                        }
-                    }
-                </script>
-            </header>   
-            <div id="form_comment">
-                <table width="650px">
-                    <tr>
-                         <td valign="top">
-                            <form><label id="DaName" for="name">Name *</label><p id='NAME' style='display: none'></p></form>
-                         </td>
-                         <td valign="top">
-                            <input id="Name" type="text" onkeyup="wantCheck(0, true)" name="full_name" maxlength="50" size="30">
-                            <img id="nameCheck" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Transparent.png" alt="Checks Out" width="16" height="16" border="0">
-                         </td>
-                    </tr>
-                    <tr>
-                         <td valign="top">
-                            <form><label id="Email" for="email">Email Address *</label><p id='EMAIL' style='display: none'></p></form>
-                         </td>
-                         <td valign="top">
-                            <form>
-                            <input id="email" type="text" onkeyup="wantCheck(1, true)" name="email" maxlength="80" size="30">
-                            <img id="emailCheck" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Transparent.png" alt="Checks Out" width="16" height="16" border="0">
-                            </form>
-                         </td>
-                    </tr>
-                    <tr>
-                         <td valign="top">
-                            <label id="Comments" for="comments">Please Describe What You Experienced *</label>
-                          <br>
-                           <label id="max">0/1000</label>
-                         </td>
-                     <td valign="top">
-                        <textarea id="comments" name="comments" onkeyup="return imposeMaxLength(this), wantCheck(2, true)" resize: none maxlength="1000" cols="30" rows="12" ></textarea>
-                        <img id="commentsCheck" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Transparent.png" alt="Checks Out" width="16" height="16" border="0">
-                     <script>
-                        function imposeMaxLength(obj){
-                        var curlength = obj.value.length;
-                        document.getElementById('max').innerHTML = curlength + "/1000"
-                            var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : ""
-                            if (obj.getAttribute && obj.value.length > mlength){
-                                obj.value=obj.value.substring(0,mlength)
-                            }
-                        }
-                     </script>
-                     <script>
-                        //update error checkers every 1/5 of a second
-                        function update(obj) {
-                            if (obj == 0) {
-                                //name was changed
-                                window.setInterval(function(){
-                                    checkEmpty(0, Name);
-                                }, 200);
-                            } else if (obj == 1) {
-                                //email was changed
-                                window.setInterval(function(){
-                                    checkEmpty(1, email);
-                                }, 200);
-                            } else if (obj == 2) {
-                                window.setInterval(function(){
-                                    checkEmpty(2, comments);
-                                }, 200);
-                            }
-                        }
-                    </script>
-                     </td>
-                    </tr>
-                    <tr>
-                     <td colspan="2" style="text-align:center">
-                     <form>
-                        <input type="submit" onClick="checkForm(Name, email, comments)">
-                     <form>
-                     </td>
-                    </tr>
-                    </table>
-                </form>
-            </div>
-            <script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/fa/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css"/>
+        <link rel="stylesheet" type="text/css" href="css/image-gallery.css">
 
-          <footer class="site-footer">
-            <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
-            <br>
-            <span id="page-views" class="site-footer-credits">site views</span>
-          </footer>
-        </section>
-    </body>
+		<script src="js/snap.svg-min.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="theme-1">
+		<div class="container">
+			<nav id="menu" class="menu">
+				<button class="menu__handle"><span>Menu</span></button>
+				<div class="menu__inner">
+					<ul>
+						<li><a href="index.html"><i class="fa fa-fw fa-home"></i><span>Home<span></a></li>
+						<li><a href="aboutTheTeam.html"><i class="fa fa-child"></i><span>About Us<span></a></li>
+						<li><a href="download.html"><i class="fa fa-arrow-circle-o-down"></i><span>Download<span></a></li>
+						<li><a href="updates.html"><i class="fa fa-refresh"></i><span>Updates<span></a></li>
+						<li><a href="contactUs.html"><i class="fa fa-paper-plane-o"></i><span>Contact Us<span></a></li>
+					</ul>
+				</div>
+				<div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+					<svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+						<path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/>
+					</svg>
+				</div>
+			</nav>
+			<div class="main">
+				<header class="header">
+					<h1>Mift<span>A Light Weight Java Gaming Library Game</span></h1>
+				</header>
+
+
+				<section class="main-content">
+		            
+		            <div class="about-a-developer">
+						<h1 style="text-align: center;">COMING SOON</h1>
+					</div>
+
+		            <footer class="site-footer">
+			            <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
+			            <br>
+			            <a style="display:none" href="google9cdc732d83a9930a.html">Google Verification Link</a>
+		          	</footer>
+		        </section>
+			</div><!-- /main -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script>
+			(function() {
+
+				function SVGMenu( el, options ) {
+					this.el = el;
+					this.init();
+				}
+
+				SVGMenu.prototype.init = function() {
+					this.trigger = this.el.querySelector( 'button.menu__handle' );
+					this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+
+					var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+					this.pathEl = s.select( 'path' );
+					this.paths = {
+						reset : this.pathEl.attr( 'd' ),
+						open : this.shapeEl.getAttribute( 'data-morph-open' ),
+						close : this.shapeEl.getAttribute( 'data-morph-close' )
+					};
+
+					this.isOpen = false;
+
+					this.initEvents();
+				};
+
+				SVGMenu.prototype.initEvents = function() {
+					this.trigger.addEventListener( 'click', this.toggle.bind(this) );
+				};
+
+				SVGMenu.prototype.toggle = function() {
+					var self = this;
+
+					if( this.isOpen ) {
+						classie.remove( self.el, 'menu--anim' );
+						setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
+					}
+					else {
+						classie.add( self.el, 'menu--anim' );
+						setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
+					}
+					this.pathEl.stop().animate( { 'path' : this.isOpen ? this.paths.close : this.paths.open }, 350, mina.easeout, function() {
+						self.pathEl.stop().animate( { 'path' : self.paths.reset }, 800, mina.elastic );
+					} );
+					
+					this.isOpen = !this.isOpen;
+				};
+
+				new SVGMenu( document.getElementById( 'menu' ) );
+
+			})();
+		</script>
+	</body>
 </html>
