@@ -1,114 +1,100 @@
-.button-wrap {
-	margin-bottom: 3em;
+.buttontest2016 {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
-.button {
-	background: none;
-	border: none;
-	width: 250px;
-	height: 105px;
-	outline: none;
-	position: relative;
-	margin: 1em;
-	padding: 0;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-tap-highlight-color: transparent; /* For some Androids */
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.buttontest2016 a {
+  display: block;
+  height: 50px;
+  width: 200px;
+  background: #a04649;
+  
+  /*TYPE*/
+  color: white;
+  font: 17px/50px Helvetica, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+        border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  background: -moz-linear-gradient(top, #a04649 0%, #592729 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a04649), color-stop(100%,#592729)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #a04649 0%,#592729 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #a04649 0%,#592729 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #a04649 0%,#592729 100%); /* IE10+ */
+  background: linear-gradient(top, #a04649 0%,#592729 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a04649', endColorstr='#592729',GradientType=0 ); /* IE6-9 */
 }
 
-.button--round {
-	width: 150px;
-	height: 150px;
+.buttontest2016 p {
+  background: #222;
+  display: block;
+  height: 40px;
+  width: 180px; 
+  margin: -50px 0 0 10px;
+  
+  /*TYPE*/
+  text-align: center;
+  font: 12px/45px Helvetica, Verdana, sans-serif;
+  color: #fff;
+  
+  /*POSITION*/
+  position: absolute;
+  z-index: -1;
+  
+  /*CSS3*/
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+
+  -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+          box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
-.button__text {
-	display: block;
-	padding: 10px;
-	text-align: center;
-	position: relative;
-	z-index: 100;
-	font-size: 1.5em;
-	color: #5c6a70;
-	font-weight: bold;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.buttontest2016 a, p {
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  
+  -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+          box-shadow: 2px 2px 8px rgba(0,0,0,0.2);      
 }
 
-.file__size {
-	display: block;
-	padding: 10px;
-	text-align: center;
-	position: relative;
-	z-index: 100;
-	font-size: 0.9em;
-	color: #73858c;
-	font-weight: bold;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.buttontest2016:hover .top {
+  margin: -80px 0 0 10px;
+  line-height: 35px;
 }
 
-.morph-shape {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+.buttontest2016:hover .bottom {
+  margin: -10px 0 0 10px;
 }
 
-.button--line .morph-shape svg {
-	fill: none;
-	stroke: #fff;
-	stroke-width: 4px;
-	stroke-linecap: round;
+
+/*Adjust Gradient*/
+.buttontest2016 a:active {
+  background: #4d0000;
 }
 
-.button--line:nth-child(2) .morph-shape svg {
-	fill: #938edc;
+/*Pulls in Wings*/
+.buttontest2016:active .bottom {
+    margin: -20px 0 0 10px;
 }
 
-.button--fill .morph-shape svg {
-	fill: #44474D;
-}
-
-.button--fill:nth-child(4) .morph-shape svg {
-	fill: #202020;
-}
-
-.button--round .morph-shape svg {
-	stroke-width: 7px;
-}
-
-/* Example for effect */
-
-.button--anim-1 .button__text {
-	-webkit-transition: -webkit-transform 0.15s;
-	transition: transform 0.15s;
-}
-
-.button--anim-1:active .button__text {
-	-webkit-transform: translate3d(0, -5px, 0);
-	transform: translate3d(0, -5px, 0);
-}
-
-.button--anim-1 .file__size {
-	-webkit-transition: -webkit-transform 0.15s;
-	transition: transform 0.15s;
-}
-
-.button--anim-1:active .file__size {
-	-webkit-transform: translate3d(0, -5px, 0);
-	transform: translate3d(0, -5px, 0);
+.buttontest2016:active .top {
+    margin: -70px 0 0 10px;
 }
