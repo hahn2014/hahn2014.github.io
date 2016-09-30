@@ -16,6 +16,7 @@
         <link rel="stylesheet" type="text/css" href="css/contactForm.css">
 
 		<script src="js/snap.svg-min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -28,6 +29,7 @@
 					<ul>
 						<li><a href="index.html"><i class="fa fa-fw fa-home"></i><span>Home<span></a></li>
 						<li><a href="aboutTheTeam.html"><i class="fa fa-child"></i><span>About Us<span></a></li>
+						<li><a href="photoAlbum.html"><i class="fa fa-fw fa-photo"></i><span>Photo Album<span></a></li>
 						<li><a href="download.html"><i class="fa fa-arrow-circle-o-down"></i><span>Download<span></a></li>
 						<li><a href="updates.html"><i class="fa fa-refresh"></i><span>Updates<span></a></li>
 						<li><a href="contactUs.html"><i class="fa fa-paper-plane-o"></i><span>Contact Us<span></a></li>
@@ -46,7 +48,7 @@
 
 
 				<section class="main-content">
-		            <div class="about-a-developer" style="height:700px">
+		            <div class="about-a-developer" style="height:820px">
 		            	<h1 style="text-align:center;">Contact Us!</h1>
 			            <div id="form-main">
 			            	 <div id="form-div">
@@ -65,15 +67,28 @@
 						        		<div class="ease"></div>
 						      		</div>
 						    	</form>
+						    	<br>
+						    	<div style="display: inline-block">
+						    		<p>For business inquiries:</p> <button id="buttonToggler" onclick="myFunction()">Show Email</button>
+						    	</div>
+						    	<script>
+						    		function myFunction() {
+						    			if (document.getElementById("toggleDiv").style.display == "none") {
+						    				document.getElementById("toggleDiv").style.display = "inline";
+						    				document.getElementById("buttonToggler").innerHTML = "Hide Email";
+						    			} else {
+						    				document.getElementById("toggleDiv").style.display = "none";
+						    				document.getElementById("buttonToggler").innerHTML = "Show Email";
+						    			}
+						    		}
+						    	</script>
+						    	<br>
+						    	<div style="display:none" id="toggleDiv">
+		            				<div style="display: inline-block" class="g-recaptcha" data-sitekey="6LfnGQgUAAAAAPfgbBI5zppsSSc51cpdhlUEgtpr"></div>
+		            			</div>
 			            	 </div>
 			            </div>
 		            </div>
-
-
-
-
-
-
 		            <footer class="site-footer">
 			            <span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
 			            <br>
