@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="fonts/fa/css/font-awesome.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/sidebar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userProfile1.css"/>
 
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/update.js"></script>
@@ -27,7 +28,7 @@
 				<div class="menu__inner">
 					<ul>
 						<li><a href="index.html"><i class="fa fa-fw fa-home"></i><span>Home<span></a></li>
-						<li><a href="aboutTheTeam.html"><i class="fa fa-child"></i><span>About Us<span></a></li>
+						<li><a href="aboutTheTeam.html"><i class="fa fa-group"></i><span>About Us<span></a></li>
 						<li><a href="photoAlbum.html"><i class="fa fa-fw fa-photo"></i><span>Photo Album<span></a></li>
 						<li><a href="download.html"><i class="fa fa-arrow-circle-o-down"></i><span>Download<span></a></li>
 						<li><a href="updates.html"><i class="fa fa-refresh"></i><span>Updates<span></a></li>
@@ -52,8 +53,70 @@
 
 
 
+					
+
+
+
+
+					<footer class="site-footer">
+						<span class="site-footer-credits">© 2016 Hahn2014 Games, Bryce Hahn.</span>
+						<br>
+						<a style="display:none" href="google9cdc732d83a9930a.html">Google Verification Link</a>
+				  	</footer>
 				</section>
 			</div><!-- /main -->
 		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script>
+			(function() {
+
+				function SVGMenu( el, options ) {
+					this.el = el;
+					this.init();
+				}
+
+				SVGMenu.prototype.init = function() {
+					this.trigger = this.el.querySelector( 'button.menu__handle' );
+					this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+
+					var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+					this.pathEl = s.select( 'path' );
+					this.paths = {
+						reset : this.pathEl.attr( 'd' ),
+						open : this.shapeEl.getAttribute( 'data-morph-open' ),
+						close : this.shapeEl.getAttribute( 'data-morph-close' )
+					};
+
+					this.isOpen = false;
+
+					this.initEvents();
+				};
+
+				SVGMenu.prototype.initEvents = function() {
+					this.trigger.addEventListener( 'click', this.toggle.bind(this) );
+				};
+
+				SVGMenu.prototype.toggle = function() {
+					var self = this;
+
+					if( this.isOpen ) {
+						classie.remove( self.el, 'menu--anim' );
+						setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
+					}
+					else {
+						classie.add( self.el, 'menu--anim' );
+						setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
+					}
+					this.pathEl.stop().animate( { 'path' : this.isOpen ? this.paths.close : this.paths.open }, 350, mina.easeout, function() {
+						self.pathEl.stop().animate( { 'path' : self.paths.reset }, 800, mina.elastic );
+					} );
+					
+					this.isOpen = !this.isOpen;
+				};
+
+				new SVGMenu( document.getElementById( 'menu' ) );
+
+			})();
+		</script>
 	</body>
 </html>
